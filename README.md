@@ -6,6 +6,7 @@
 ![CodeQL](https://github.com/UltiRequiem/chigo/workflows/CodeQL/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/UltiRequiem/chigo)](https://goreportcard.com/report/github.com/UltiRequiem/chigo)
 
+![Cover](./assets/cover.jpg)
 
 ### Installation
 
