@@ -18,7 +18,7 @@
 go install github.com/UltiRequiem/chigo@latest
 ```
 
-Or use a binary from [releases](https://github.com/UltiRequiem/yeah/chigo/latest).
+Or use a binary from [releases](https://github.com/UltiRequiem/chigo/releases/latest).
 
 ### License
 
