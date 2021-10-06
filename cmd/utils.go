@@ -35,13 +35,13 @@ func PrintHelp() {
 	helpMessage := ` Chigo %s
 
  Concatenate FILE(s) or standard input to standard output.
- With no FILE or when FILE is -, read stardard input.
+ When no FILE is passed read stardard input.
   
   Examples:
-    chigo fOne fTwo   // Output fOne and fTwo contents.
-    chigo             // Copy standard input to standard output.
-    echo "My Message" // Display "My message".
-    fortune | chigo   // Display a rainbow cookie.
+    chigo fOne fTwo   # Output fOne and fTwo contents.
+    chigo             # Copy standard input to standard output.
+    echo "My Message" # Display "My message".
+    fortune | chigo   # Display a rainbow cookie.
             
  If you need more help, found a bug or want to suggest a new feature:
  github.com/UltiRequiem/chigo`
