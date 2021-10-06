@@ -8,6 +8,10 @@
 
 ![Cover](./assets/cover.jpg)
 
+### Screenshot
+
+![Screenshot](./assets/screenshot.png)
+
 ### Installation
 
 ```bash
