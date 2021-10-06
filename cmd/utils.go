@@ -10,6 +10,8 @@ import (
 	. "github.com/UltiRequiem/chigo/pkg"
 )
 
+const VERSION = "1.0.0"
+
 func JoinFilesToString(files []string) string {
 	text := make([]string, len(files))
 
@@ -29,11 +31,25 @@ func JoinFilesToString(files []string) string {
 }
 
 func PrintHelp() {
-	fmt.Println("TODO")
+
+	helpMessage := ` Chigo %s
+
+ Concatenate FILE(s) or standard input to standard output.
+ With no FILE or when FILE is -, read stardard input.
+  
+  Examples:
+    chigo fOne fTwo   // Output fOne and fTwo contents.
+    chigo             // Copy standard input to standard output.
+    echo "My Message" // Display "My message".
+    fortune | chigo   // Display a rainbow cookie.
+            
+ If you need more help, found a bug or want to suggest a new feature:
+ github.com/UltiRequiem/chigo`
+
+	PrintWithScanner(fmt.Sprintf(helpMessage, VERSION))
 }
 
-func PrintFilesWithScanner(files []string) {
-	text := JoinFilesToString(files)
+func PrintWithScanner(text string) {
 	scanner := bufio.NewScanner(strings.NewReader(text))
 
 	var j int = 1
@@ -46,7 +62,6 @@ func PrintFilesWithScanner(files []string) {
 		j++
 	}
 }
-
 
 func startProcessFromStdin() {
 	reader := bufio.NewReader(os.Stdin)
@@ -67,5 +82,3 @@ func startProcessFromStdin() {
 		j++
 	}
 }
-
-

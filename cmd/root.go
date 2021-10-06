@@ -9,7 +9,8 @@ func Main() {
 	}
 
 	if isThereFileArguments {
-		PrintFilesWithScanner(files)
+	        text := JoinFilesToString(files)
+		PrintWithScanner(text)
 		return
 	}
 
