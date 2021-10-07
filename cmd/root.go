@@ -14,7 +14,7 @@ func Main() {
 	}
 
 	if fileArguments {
-		PrintWithScanner(JoinFilesToString(files))
+		printWithScanner(joinFiles(files))
 		return
 	}
 

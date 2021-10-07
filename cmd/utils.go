@@ -28,10 +28,10 @@ func printHelp() {
  If you need more help, found a bug or want to suggest a new feature:
   https://github.com/UltiRequiem/chigo`
 
-	PrintWithScanner(fmt.Sprintf(helpMessage, VERSION))
+	printWithScanner(fmt.Sprintf(helpMessage, VERSION))
 }
 
-func JoinFilesToString(files []string) string {
+func joinFiles(files []string) string {
 	text := make([]string, len(files))
 
 	for index, file := range files {
@@ -49,7 +49,7 @@ func JoinFilesToString(files []string) string {
 	return strings.Join(text, "\n")
 }
 
-func PrintWithScanner(text string) {
+func printWithScanner(text string) {
 	scanner := bufio.NewScanner(strings.NewReader(text))
 
 	var j int = 1
