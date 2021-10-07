@@ -20,10 +20,10 @@ func printHelp() {
  When no FILE is passed read stardard input.
   
   Examples:
-    chigo fOne fTwo   # Output fOne and fTwo contents.
-    chigo             # Copy standard input to standard output.
-    echo "My Message" # Display "My message".
-    fortune | chigo   # Display a rainbow cookie.
+    chigo fOne fTwo           # Output fOne and fTwo contents.
+    chigo                     # Copy standard input to standard output.
+    echo "My Message" | chigo # Display "My message".
+    fortune | chigo           # Display a rainbow cookie.
             
  If you need more help, found a bug or want to suggest a new feature:
   https://github.com/UltiRequiem/chigo`
