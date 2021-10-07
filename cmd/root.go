@@ -1,20 +1,19 @@
 package cmd
 
-import (
-	"github.com/mattn/go-colorable"
-)
+import "github.com/mattn/go-colorable"
 
 func Main() {
-    defer colorable.EnableColorsStdout(nil)()
+	// Windows Support
+	defer colorable.EnableColorsStdout(nil)()
 
-	help, isThereFileArguments, files := getParametersAndFlags()
+	help, thereFileArguments, files := getParametersAndFlags()
 
 	if help {
 		PrintHelp()
 		return
 	}
 
-	if isThereFileArguments {
+	if thereFileArguments {
 		text := JoinFilesToString(files)
 		PrintWithScanner(text)
 		return
