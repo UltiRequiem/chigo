@@ -1,6 +1,12 @@
 package cmd
 
+import (
+	"github.com/mattn/go-colorable"
+)
+
 func Main() {
+    defer colorable.EnableColorsStdout(nil)()
+
 	help, isThereFileArguments, files := getParametersAndFlags()
 
 	if help {
