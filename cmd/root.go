@@ -6,16 +6,15 @@ func Main() {
 	// Windows Support
 	defer colorable.EnableColorsStdout(nil)()
 
-	help, thereFileArguments, files := getParametersAndFlags()
+	help, fileArguments, files := parametersAndFlags()
 
 	if help {
-		PrintHelp()
+		printHelp()
 		return
 	}
 
-	if thereFileArguments {
-		text := JoinFilesToString(files)
-		PrintWithScanner(text)
+	if fileArguments {
+		PrintWithScanner(JoinFilesToString(files))
 		return
 	}
 

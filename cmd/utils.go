@@ -12,7 +12,7 @@ import (
 
 const VERSION = "1.0.0"
 
-func PrintHelp() {
+func printHelp() {
 
 	helpMessage := ` Chigo %s
 
