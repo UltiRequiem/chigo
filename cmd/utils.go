@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
- "github.com/UltiRequiem/chigo/pkg"
+	"github.com/UltiRequiem/chigo/pkg"
 )
 
 const VERSION = "1.0.0"

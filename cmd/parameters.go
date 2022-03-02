@@ -6,7 +6,7 @@ func parametersAndFlags() (bool, bool, []string) {
 	help := flag.Bool("help", false, "Display Help")
 	helpShort := flag.Bool("h", false, "Display Help")
 
-        flag.Usage = printHelp
+	flag.Usage = printHelp
 
 	flag.Parse()
 
