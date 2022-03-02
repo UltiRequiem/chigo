@@ -1,6 +1,10 @@
 package cmd
 
-import "github.com/mattn/go-colorable"
+import (
+	"github.com/UltiRequiem/chigo/internal"
+
+	"github.com/mattn/go-colorable"
+)
 
 func Main() {
 	// Windows Support
@@ -14,9 +18,16 @@ func Main() {
 	}
 
 	if fileArguments {
-		printWithScanner(joinFiles(files))
+		data, error := internal.JoinFiles(files)
+
+		if error != nil {
+			internal.PrintWithScanner(error.Error())
+			return
+		}
+
+		internal.PrintWithScanner(data)
 		return
 	}
 
-	startProcessFromStdin()
+	internal.StartProcessFromStdin()
 }
