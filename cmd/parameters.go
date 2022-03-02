@@ -18,10 +18,13 @@ func parametersAndFlags() (bool, bool, []string) {
 	return *help || *helpShort, flag.NArg() > 0, flag.Args()
 }
 
+func printHelp() {
+	internal.PrintWithScanner(fmt.Sprintf(HELP_MESSAGE, VERSION))
+}
+
 const VERSION = "1.0.0"
 
-func printHelp() {
-	helpMessage := ` Chigo %s
+const HELP_MESSAGE = ` Chigo %s
 
  Concatenate FILE(s) or standard input to standard output.
  When no FILE is passed read standard input.
@@ -34,6 +37,3 @@ func printHelp() {
             
  If you need more help, found a bug or want to suggest a new feature:
   https://github.com/UltiRequiem/chigo`
-
-	internal.PrintWithScanner(fmt.Sprintf(helpMessage, VERSION))
-}
