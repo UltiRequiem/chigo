@@ -4,42 +4,37 @@ package internal
 import (
 	"bufio"
 	"fmt"
-	"io"
 	"os"
 	"strings"
 
-	"github.com/UltiRequiem/chigo/pkg"
+	chigo "github.com/UltiRequiem/chigo/pkg"
 )
 
 func PrintWithScanner(text string) {
 	scanner := bufio.NewScanner(strings.NewReader(text))
 
-	var j int = 1
+	for i := 1.0; scanner.Scan(); i++ {
+		rgb := chigo.NewRGB(i)
 
-	for scanner.Scan() {
-		r, g, b := chigo.GetRGB(j)
-
-		fmt.Printf("\033[38;2;%d;%d;%dm%s\033[0m\n", r, g, b, scanner.Text())
-
-		j++
+		fmt.Printf("\033[38;2;%d;%d;%dm%s\033[0m\n", rgb.Red, rgb.Green, rgb.Blue, scanner.Text())
 	}
 }
 
 func StartProcessFromStdin() {
 	reader := bufio.NewReader(os.Stdin)
 
-	var j int = 1
+	var j float64 = 1
 
 	for {
 		input, _, err := reader.ReadRune()
 
-		if err != nil && err == io.EOF {
+		if err != nil {
 			break
 		}
 
-		r, g, b := chigo.GetRGB(j)
+		rgb := chigo.NewRGB(j)
 
-		fmt.Printf("\033[38;2;%d;%d;%dm%c\033[0m", r, g, b, input)
+		fmt.Printf("\033[38;2;%d;%d;%dm%s\033[0m", rgb.Red, rgb.Green, rgb.Blue, string(input))
 
 		j++
 	}
