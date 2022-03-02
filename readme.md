@@ -5,8 +5,14 @@
 ![Lines Of Code](https://img.shields.io/tokei/lines/github.com/UltiRequiem/chigo?color=blue&label=Total%20Lines)
 ![CodeQL](https://github.com/UltiRequiem/chigo/workflows/CodeQL/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/UltiRequiem/chigo)](https://goreportcard.com/report/github.com/UltiRequiem/chigo)
+[![Go Reference](https://pkg.go.dev/badge/github.com/UltiRequiem/chigo/pkg.svg)](https://pkg.go.dev/github.com/UltiRequiem/chigo/pkg)
 
 [Lolcat](https://github.com/busyloop/lolcat) port for Golang.
+
+It also exports utils to output with colors in your own CLI Tools,
+[usage example](https://github.com/UltiRequiem/lorelai/tree/main/cmd).
+
+> [Check the Docs](https://pkg.go.dev/github.com/UltiRequiem/chigo@/pkg)
 
 ### Screenshot
 
