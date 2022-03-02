@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	. "github.com/UltiRequiem/chigo/pkg"
+ "github.com/UltiRequiem/chigo/pkg"
 )
 
 const VERSION = "1.0.0"
@@ -17,7 +17,7 @@ func printHelp() {
 	helpMessage := ` Chigo %s
 
  Concatenate FILE(s) or standard input to standard output.
- When no FILE is passed read stardard input.
+ When no FILE is passed read standard input.
   
   Examples:
     chigo fOne fTwo           # Output fOne and fTwo contents.
@@ -55,7 +55,7 @@ func printWithScanner(text string) {
 	var j int = 1
 
 	for scanner.Scan() {
-		r, g, b := GetRGB(j)
+		r, g, b := chigo.GetRGB(j)
 
 		fmt.Printf("\033[38;2;%d;%d;%dm%s\033[0m\n", r, g, b, scanner.Text())
 
@@ -75,7 +75,7 @@ func startProcessFromStdin() {
 			break
 		}
 
-		r, g, b := GetRGB(j)
+		r, g, b := chigo.GetRGB(j)
 
 		fmt.Printf("\033[38;2;%d;%d;%dm%c\033[0m", r, g, b, input)
 
