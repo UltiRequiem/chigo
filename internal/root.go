@@ -23,19 +23,16 @@ func PrintWithScanner(text string) {
 func StartProcessFromStdin() {
 	reader := bufio.NewReader(os.Stdin)
 
-	var j float64 = 1
-
-	for {
+	for i := 1.0; true; i++ {
 		input, _, err := reader.ReadRune()
 
 		if err != nil {
+			PrintWithScanner(err.Error())
 			break
 		}
 
-		rgb := chigo.NewRGB(j)
+		rgb := chigo.NewRGB(i)
 
 		fmt.Printf("\033[38;2;%d;%d;%dm%s\033[0m", rgb.Red, rgb.Green, rgb.Blue, string(input))
-
-		j++
 	}
 }
