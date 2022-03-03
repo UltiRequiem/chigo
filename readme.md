@@ -12,15 +12,17 @@
 It also exports utils to output with colors in your own CLI Tools,
 [usage example](https://github.com/UltiRequiem/lorelai/tree/main/cmd).
 
-> [Check the Docs](https://pkg.go.dev/github.com/UltiRequiem/chigo@/pkg)
+[Blog explaining this project](https://blog.ultirequiem.com/chigo)
 
-### Screenshot
+### Showcase
 
 ![Screenshot](./assets/screenshot.png)
 
+[YouTube Video](https://youtu.be/4Bc-aBfjxwY)
+
 ### Installation
 
-```bash
+```sh
 go install github.com/UltiRequiem/chigo@latest
 ```
 
