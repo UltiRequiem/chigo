@@ -3,6 +3,8 @@ package cmd
 import (
 	"github.com/UltiRequiem/chigo/internal"
 
+	chigo "github.com/UltiRequiem/chigo/pkg"
+
 	"github.com/mattn/go-colorable"
 )
 
@@ -21,11 +23,11 @@ func Main() {
 		data, error := internal.JoinFiles(files)
 
 		if error != nil {
-			internal.PrintWithScanner(error.Error())
+			chigo.PrintWithColors(error.Error())
 			return
 		}
 
-		internal.PrintWithScanner(data)
+		chigo.PrintWithColors(data)
 		return
 	}
 

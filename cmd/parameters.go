@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/UltiRequiem/chigo/internal"
+	"github.com/UltiRequiem/chigo/pkg"
 )
 
 func parametersAndFlags() (bool, bool, []string) {
@@ -19,7 +19,7 @@ func parametersAndFlags() (bool, bool, []string) {
 }
 
 func printHelp() {
-	internal.PrintWithScanner(fmt.Sprintf(HELP_MESSAGE, VERSION))
+	chigo.PrintWithColors(fmt.Sprintf(HELP_MESSAGE, VERSION))
 }
 
 const VERSION = "1.0.0"
