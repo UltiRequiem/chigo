@@ -5,6 +5,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+
 	chigo "github.com/UltiRequiem/chigo/pkg"
 )
 

@@ -1,9 +1,6 @@
 package internal
 
-import (
-	"fmt"
-	"os"
-)
+import "os"
 
 func JoinFiles(files []string) (string, error) {
 	text := ""
@@ -12,7 +9,7 @@ func JoinFiles(files []string) (string, error) {
 		fileText, err := os.ReadFile(file)
 
 		if err != nil {
-			return "", fmt.Errorf("Error while trying to read file %s.", file)
+			return "", err
 		}
 
 		text += string(fileText) + "\n"
