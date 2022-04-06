@@ -19,7 +19,7 @@ func parametersAndFlags() (bool, bool, []string) {
 }
 
 func printHelp() {
-	chigo.PrintWithColors(fmt.Sprintf(HELP_MESSAGE, VERSION))
+	fmt.Println(chigo.Colorize(fmt.Sprintf(HELP_MESSAGE, VERSION)))
 }
 
 const VERSION = "1.0.0"

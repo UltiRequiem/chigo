@@ -16,7 +16,7 @@ func StartProcessFromStdin() {
 		input, _, err := reader.ReadRune()
 
 		if err != nil {
-			chigo.PrintWithColors(err.Error())
+			fmt.Println(chigo.Colorize(err.Error()))
 			break
 		}
 

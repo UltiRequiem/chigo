@@ -1,9 +1,11 @@
 package main
 
 import (
+	"fmt"
+
 	chigo "github.com/UltiRequiem/chigo/pkg"
 )
 
 func main() {
-	chigo.PrintWithColors("Hello, World!")
+	fmt.Println(chigo.Colorize("Hello, World!"))
 }

@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"fmt"
 	"github.com/UltiRequiem/chigo/internal"
 
 	chigo "github.com/UltiRequiem/chigo/pkg"
@@ -23,11 +24,11 @@ func Main() {
 		data, error := internal.JoinFiles(files)
 
 		if error != nil {
-			chigo.PrintWithColors(error.Error())
+			fmt.Println(chigo.Colorize(error.Error()))
 			return
 		}
 
-		chigo.PrintWithColors(data)
+		fmt.Println(chigo.Colorize(data))
 		return
 	}
 
