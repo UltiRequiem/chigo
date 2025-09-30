@@ -28,7 +28,7 @@ It also exports utils to output with colors in your own CLI Tools.
 package main
 
 import (
-        "fmt"
+	"fmt"
 	chigo "github.com/UltiRequiem/chigo/pkg"
 )
 
